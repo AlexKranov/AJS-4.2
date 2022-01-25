@@ -1,10 +1,29 @@
-import getHealth from "../health";
+import sortedHealth from "../health";
 
-test.each([
-  [{ name: "magician", health: 11 }, "critycal"],
-  [{ name: "magician", health: 50 }, "wounded"],
-  [{ name: "magician", health: 96 }, "healthy"],
-])("%o", (status, expected) => {
-  const result = getHealth(status);
-  expect(result).toBe(expected);
+test("return correctly value 1", () => {
+  const heroes = sortedHealth([
+    { name: "bowman", health: 10 },
+    { name: "swordsman", health: 100 },
+    { name: "magician", health: 80 },
+  ]);
+  const result = [
+    { name: "swordsman", health: 100 },
+    { name: "magician", health: 80 },
+    { name: "bowman", health: 10 },
+  ];
+  expect(heroes).toEqual(result);
+});
+
+test("return correctly value 2", () => {
+  const heroes = sortedHealth([
+    { name: "bowman", health: 10 },
+    { name: "swordsman", health: 100 },
+    { name: "magician", health: 80 },
+  ]);
+  const result = [
+    { name: "bowman", health: 10 },
+    { name: "swordsman", health: 100 },
+    { name: "magician", health: 80 },
+  ];
+  expect(heroes).not.toBe(result);
 });
