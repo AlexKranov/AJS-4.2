@@ -30,3 +30,6 @@
 Вы можете дополнительно изучить список доступных "матчер" (список приведён на странице [Документация по expect](https://jestjs.io/docs/ru/expect)), для организации сравнения.
 
 ---
+
+# AJS-4.2
+[![Build status](https://ci.appveyor.com/api/projects/status/u69uh8xndtfkwe50?svg=true)](https://ci.appveyor.com/project/AlexKranov/ajs-4-2)
